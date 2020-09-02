@@ -22,8 +22,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> getProducts() {
-        return ResponseEntity.ok(productService.GetProducts());
+    public ResponseEntity<Product> getProductById(int id) {
+        return ResponseEntity.ok(productService.getProductById(id));
     }
 
     @PostMapping
